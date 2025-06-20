@@ -1,6 +1,6 @@
 # ⚔️ Hecker DSA Sheet
 
-> "Ek ek sawaal, ek ek vaar — Hecker banega DSA ka sultan!" 🧠🔥
+
 
 Welcome to the **Hecker DSA Sheet** — a deadly mix of handpicked, pattern-based, no-BS DSA questions made for *real* growth, not just streaks.
 
