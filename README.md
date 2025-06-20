@@ -40,19 +40,6 @@ Yeh repo mera personal DSA grind sheet hai. Yahaan wohi problems add honge jo:
 
 ---
 
-## 🎯 Current Progress
-
-| Topic | Problems Solved | Status |
-|-------|----------------|--------|
-| **Arrays** | 0/20 | 🔄 In Progress |
-| **Strings** | 0/15 | ⏳ Pending |
-| **Linked Lists** | 0/10 | ⏳ Pending |
-| **Trees** | 0/15 | ⏳ Pending |
-| **Graphs** | 0/12 | ⏳ Pending |
-| **Dynamic Programming** | 0/20 | ⏳ Pending |
-| **Sorting** | 1/8 | 🔄 In Progress |
-
----
 
 ## 💡 Philosophy
 
