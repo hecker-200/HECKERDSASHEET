@@ -52,6 +52,8 @@ vector<int>nse(vector<int>&nums){
         
         st.push(nums[i]);
     }
+
+    reverse(ans.begin(),ans.end());
     
     return ans;
 }
