@@ -1,0 +1,57 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    
+    int n,k;
+    
+    cin >> n >> k;
+    vector<int>arr;
+    
+    for(int i = 0;i<n;i++){
+        int x ;
+        cin >> x;
+        
+        
+        arr.push_back(x);
+    }
+    
+    
+    //maxsum 
+    
+    int i = 0;
+    int j = 0;
+    int sum = 0;
+    int maxsum = INT_MIN;
+    
+    while(j < n){
+        
+        sum += arr[j];
+        
+        if(j - i + 1 == k){
+            
+            maxsum = max(maxsum,sum);
+            
+            sum -= arr[i];
+            
+            i++;
+        }
+        j++;
+    }
+    
+    
+    
+    
+    cout << maxsum;
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
