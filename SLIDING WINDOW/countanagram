@@ -1,0 +1,64 @@
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    
+   string s,p;
+   
+   getline(cin,s);
+   getline(cin,p);
+   
+   int n = s.size();
+   int k = p.size();
+    
+    map<char,int>orignal;
+    map<char,int>pattern;
+    
+    for(auto a : p){
+        pattern[a]++;
+    }
+    
+    
+    
+    int i = 0;
+    int j = 0;
+    int count = 0;
+    
+    
+    while(j < n){
+        
+        orignal[s[j]]++;
+        
+        if(j-i+1 == k){
+            
+            if(orignal == pattern){
+                count++;
+            }
+            
+            orignal[s[i]]--;
+            
+            if(orignal[s[i]] == 0){
+                orignal.erase(s[i]);
+            }
+            
+            i++;
+            
+        }
+        
+        j++;
+    }
+    
+    
+    
+    
+    
+    
+   cout << count;
+    
+    
+    
+    return 0;
+}
