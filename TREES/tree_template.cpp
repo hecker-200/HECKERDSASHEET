@@ -83,14 +83,98 @@ void postorder(struct node*root){
     cout << root->val << " ";
 }
 
+void levelorder(struct node*root){
+    queue<node*>q;
+    q.push(root);
+    
+    while(!q.empty()){
+        
+        node*p = q.front();
+        q.pop();
+        
+        if(p->left){
+            q.push(p->left);
+        }
+        
+        if(p->right){
+            q.push(p->right);
+        }
+        
+        cout << p->val << " ";
+    }
+    
+    cout << endl;
+}
+
+void itpreorder(struct node*root){
+    
+    stack<node*>st;
+    
+    st.push(root);
+    
+    while(!st.empty()){
+        
+        node*p = st.top();
+        st.pop();
+        
+        if(p->right){
+            st.push(p->right);
+        }
+        
+        if(p->left){
+            st.push(p->left);
+        }
+        
+        cout << p->val << " ";
+    }
+}
+
+void itinorder(struct node*root){
+    
+    stack<node*>st;
+    
+    while(!st.empty() || root != nullptr){
+        
+        while(root != nullptr){
+            
+            st.push(root);
+            root = root->left;
+        }
+        
+        node*p = st.top();
+        st.pop();
+        
+        cout << p->val << " ";
+        
+        root = p->right;
+        
+        
+    }
+}
+
+
+
 
 
 int main()
 {
     struct node*root = creatingbinarytree();
     preorder(root);
+    cout << endl;
     inorder(root);
+    cout << endl;
     postorder(root);
+    cout << endl;
+    levelorder(root);
+    cout << endl;
+    
+    itpreorder(root);
+    cout << endl;
+    
+    itinorder(root);
+    cout << endl;
+    
+    
 
     return 0;
 }
